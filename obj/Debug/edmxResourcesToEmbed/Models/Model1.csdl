@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpresaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Departamento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Cargo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_ingreso" Type="DateTime" Precision="0" />
+    <Property Name="Salario" Type="Int32" />
+  </EntityType>
+  <EntityType Name="nominas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Año" Type="Int32" />
+    <Property Name="mes" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="total" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="EmpresaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="empleado" EntityType="Self.empleado" />
+    <EntitySet Name="nominas" EntityType="Self.nominas" />
+  </EntityContainer>
+</Schema>

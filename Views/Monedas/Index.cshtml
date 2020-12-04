@@ -1,0 +1,47 @@
+﻿@model Final.Models.Monedas
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>Conversor de unidades</h1>
+
+    <div class="row">
+        @using (Html.BeginForm("/Index", "Monedas", FormMethod.Post))
+        {
+
+            <div class="form-group">
+                <label for="">Ingrese su monto en "Dolar" o "Pesos" </label>
+                <input type="text" class="form-control" id="multiplicador" name="multiplicador" value="@Model.multiplicador" />
+            </div>
+
+            <div class="form-group">
+                <label for="Dolar">Tasa del dolar</label>
+                <input type="text" class="form-control" id="Dolar" name="Dolar" value="@Model.dolar" />
+            </div>
+
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" class="form-control" id="total" name="total" value="@Model.total" />
+            </div>
+            <div>
+                <h6>Para convertir de "Dolar" a "Pesos" presione el boton azul "Dolar"  o viceversa</h6>
+            </div>
+            <button type="submit" class="btn btn-info" id="123" value="123" name="dolar12">Dolar</button>
+
+           <button type="submit" class="btn btn-warning" id="12" value="12" name="dolar12">Pesos Dominicano</button>
+
+          
+
+
+        }
+    </div>
+
+
+</body>
+</html>

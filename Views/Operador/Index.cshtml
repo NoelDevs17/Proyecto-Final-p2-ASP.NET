@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+
+<body>
+    <h2> Calculadora De Operaciones</h2>
+
+    <div class="row">
+        @using (Html.BeginForm("/Index", "Operador", FormMethod.Post))
+        {
+
+            <div class="form-group">
+                <label for="valor1">Valor 1</label>
+                <input type="text" class="form-control" id="valor1" name="valor1" value="@Model.valor1" />
+            </div>
+
+            <div class="form-group">
+                <label for="valor2">Valor 2</label>
+                <input type="text" class="form-control" id="valor2" name="valor2" value="@Model.valor2" />
+            </div>
+
+            <div class="form-group">
+                <label for="resultado">Resultado</label>
+                <input type="text" class="form-control" id="resultado" name="resultado" value="@Model.resultado" />
+            </div>
+
+            <button type="submit" class="btn btn-info" id="add" value="add" name="calculadora">+</button>
+
+            <button type="submit" class="btn btn-danger" id="min" value="min" name="calculadora">-</button>
+
+            <button type="submit" class="btn btn-warning" id="sub" value="sub" name="calculadora">*</button>
+
+            <button type="submit" class="btn btn-default" id="divv" value="divv" name="calculadora">/</button>
+        }
+
+
+    </div>
+</body>
+</html>
+
+

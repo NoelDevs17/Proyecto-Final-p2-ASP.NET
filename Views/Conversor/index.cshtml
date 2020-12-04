@@ -1,0 +1,47 @@
+﻿@model  Final.Models.Conversor
+@{
+    ViewBag.Title = "index";
+}
+
+
+<html>
+
+<body>
+    <h1>Conversor de unidades</h1>
+
+    <div class="row">
+        @using (Html.BeginForm("/Index", "Conversor", FormMethod.Post))
+        {
+            <h4>Ingrese Celsius o Fahrenheit</h4>
+            <div class="form-group">
+                <label for="grados">Celsius o Fahrenheit</label>
+                <input type="text" class="form-control" id="grados" name="grados" value="@Model.grados" />
+            </div>
+
+            @*<div class="form-group">
+                <label for="fahrenheit">Fahrenheit </label>
+                <input type="text" class="form-control" id="fahrenheit" name="fahrenheit" value="@Model.fahrenheit" />
+            </div>*@
+
+            <div class="form-group">
+                <label for="resultado">Resultado</label>
+                <input type="text" class="form-control" id="resultado" name="resultado" value="@Model.resultado" />
+            </div>
+            <div>
+                <h6>Presione Fahrenheit si desea convertir a Celsius y Presione Celsius si desea convertir a Fahrenheit</h6>
+            </div>
+
+            <button type="submit" class="btn btn-danger" id="fahrenheit" value="fahrenheit" name="conversor11">fahrenheit</button>
+
+           <button type="submit" class="btn btn-info" id="Celsius" value="Celsius" name="conversor11">Celsius</button>
+
+
+
+
+        }
+    </div>
+
+
+</body>
+</html>
+
